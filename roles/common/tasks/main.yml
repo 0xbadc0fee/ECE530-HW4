@@ -1,0 +1,7 @@
+---
+- name: copy user names file to shard host
+  become: true
+  copy:
+    src: '{{ copy_src }}'
+    dest: '{{ copy_dest }}'
+

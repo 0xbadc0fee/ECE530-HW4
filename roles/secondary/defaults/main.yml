@@ -1,0 +1,5 @@
+---
+secondary_container_count: 2
+default_container_name: secondary-mongo-
+default_container_image: mongo
+default_container_command: sleep 1d

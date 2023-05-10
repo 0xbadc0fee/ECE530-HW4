@@ -1,0 +1,32 @@
+---
+- name: HW4-ECE530
+  hosts: shards
+  become: yes
+
+  tasks:
+          - name: Setup Shard Host & Packages
+            import_role:
+                    name: shardhost
+
+          - pause:
+                    seconds: 30
+
+          - name: copy team.txt to all container root directories
+            import_role:
+                    name: common
+
+          - pause:
+                    seconds: 30
+
+          - name: setup primary node container
+            import_role:
+                    name: primary
+
+          - pause:
+                    seconds: 30          
+
+          - name: setup secondary node containers
+            import_role:
+                    name: secondary
+
+

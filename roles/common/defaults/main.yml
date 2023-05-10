@@ -1,0 +1,3 @@
+---
+copy_src: 'team.txt'
+copy_dest: '/root/'

@@ -1,0 +1,6 @@
+---
+
+primary_container_count: 1
+default_container_name: primary-mongo-
+default_container_image: mongo
+default_container_command: sleep 1d

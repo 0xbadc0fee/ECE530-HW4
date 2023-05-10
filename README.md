@@ -3,6 +3,9 @@
 1. Create 2 host machines (vm's) using ubuntu live server 20.04
 2. Assign one to be the Ansible Control Host and the other to be the Managed Host
 3. Assign static IP's to both, make sure they're on the same network.
+> demo control node: user=sammy, pwd=password, ip=192.168.1.80
+>
+> demo managed node: user=ansible, pwd=ansible, ip=192.168.1.81
 4. Initially both hosts only need a bare minimum install, basic Ubuntu + OpenSSH, no other apps.
 5. Log into the Control Node and do the following steps:
 6. Install ansible (see hw4 docs)
@@ -17,6 +20,7 @@
 4. install ansible on control node
 5. edt '$ /etc/ansible/hosts' file and add the following line
 > [shards]
+>
 > 192.168.1.81
 6. test ansible ping to managed host
 >  $ ansible shards -m ping -u ansible
@@ -29,6 +33,6 @@
 ## Validation
 1. from managed host, check docker containers, should be 1 primary and 2 secondary
 >  $ sudo docker ps -a
-2. done.
+2. Done.  If you don't see 1 primary and 2 secondary, re run the playbook once more and check back.
 
 
